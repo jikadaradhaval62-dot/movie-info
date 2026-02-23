@@ -1,6 +1,4 @@
-# Netflix Clone - Complete Setup Guide
 
-A full-stack Netflix-like movie streaming website built with React.js, Node.js, and The Movie Database (TMDB) API.
 
 ## Project Structure
 
@@ -60,7 +58,7 @@ Open a terminal and run:
 
 ```bash
 # Navigate to server folder
-cd netflix-clone/server
+
 
 # Install dependencies
 npm install
@@ -93,7 +91,7 @@ Open a **new** terminal window/tab and run:
 
 ```bash
 # Navigate to client folder
-cd netflix-clone/client
+
 
 # Install dependencies
 npm install
@@ -155,7 +153,7 @@ Check your internet connection. Images are loaded from TMDB's CDN.
 - ✅ View movie details with cast and genres
 - ✅ Watch YouTube trailers
 - ✅ Responsive design (mobile, tablet, desktop)
-- ✅ Netflix-style UI with dark theme
+- ✅style UI with dark theme
 
 ## API Endpoints (Backend)
 
