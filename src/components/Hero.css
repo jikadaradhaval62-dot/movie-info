@@ -1,0 +1,180 @@
+/* Hero Styles */
+
+.hero {
+  position: relative;
+  height: 56.25vw;
+  min-height: 400px;
+  max-height: 85vh;
+  width: 100%;
+}
+
+.hero.skeleton {
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+
+.hero-image.loaded {
+  opacity: 1;
+}
+
+.hero-fallback {
+  width: 100%;
+  height: 100%;
+  background-color: #1a1a1a;
+}
+
+.hero-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #141414 0%, transparent 60%);
+}
+
+.hero-gradient-left {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, transparent 50%);
+}
+
+.hero-gradient-top {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, transparent 30%);
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+  right: 0;
+  padding: 0 4%;
+  max-width: 600px;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-title {
+    font-size: 5rem;
+  }
+}
+
+.hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  color: #d2d2d2;
+}
+
+.hero-meta .rating {
+  color: #46d369;
+  font-weight: 600;
+}
+
+.hero-overview {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #d2d2d2;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .hero-overview {
+    font-size: 1.2rem;
+  }
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-play {
+  background-color: white;
+  color: black;
+}
+
+.btn-info {
+  background-color: rgba(109, 109, 110, 0.7);
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .btn {
+    padding: 10px 25px;
+    font-size: 1.2rem;
+  }
+}
+
+.mute-btn {
+  position: absolute;
+  bottom: 20%;
+  right: 4%;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(255,255,255,0.5);
+  border-radius: 50%;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.mute-btn:hover {
+  background: rgba(255,255,255,0.1);
+}

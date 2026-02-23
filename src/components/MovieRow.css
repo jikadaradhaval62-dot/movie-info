@@ -1,0 +1,87 @@
+/* MovieRow Styles */
+
+.movie-row {
+  padding: 20px 4%;
+  position: relative;
+}
+
+.row-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .row-title {
+    font-size: 1.5rem;
+  }
+}
+
+.explore-all {
+  font-size: 0.8rem;
+  color: #54b9c5;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.movie-row:hover .explore-all {
+  opacity: 1;
+}
+
+.row-container {
+  position: relative;
+}
+
+.movies-container {
+  display: flex;
+  gap: 8px;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.movies-container::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 100;
+}
+
+.scroll-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.scroll-left {
+  left: 0;
+  transform: translateX(-10px);
+}
+
+.scroll-right {
+  right: 0;
+  transform: translateX(10px);
+}
+
+.scroll-btn.visible {
+  opacity: 1;
+  transform: translateX(0);
+}

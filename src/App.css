@@ -1,0 +1,111 @@
+/* Netflix Clone Styles */
+
+.app {
+  min-height: 100vh;
+  background-color: #141414;
+  color: white;
+}
+
+/* Movie Rows Container */
+.movie-rows {
+  position: relative;
+  z-index: 10;
+  margin-top: -150px;
+  padding-bottom: 50px;
+}
+
+/* Search Results */
+.search-results {
+  padding: 100px 4% 50px;
+  min-height: 100vh;
+}
+
+.search-results h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.search-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+@media (min-width: 600px) {
+  .search-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .search-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .search-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (min-width: 1500px) {
+  .search-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.search-item {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.search-item:hover {
+  transform: scale(1.05);
+}
+
+.search-item img {
+  width: 100%;
+  border-radius: 4px;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+}
+
+.search-item p {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #e5e5e5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.no-results {
+  text-align: center;
+  padding: 50px;
+  color: #808080;
+  font-size: 1.2rem;
+}
+
+/* Loading State */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #333;
+  border-top-color: #e50914;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

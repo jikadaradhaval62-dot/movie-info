@@ -1,0 +1,175 @@
+/* Navbar Styles */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0 4%;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.4s ease;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7) 10%, transparent);
+}
+
+.navbar.scrolled {
+  background-color: #141414;
+}
+
+.navbar-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.logo {
+  color: #e50914;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: -1px;
+}
+
+.nav-links {
+  display: none;
+  list-style: none;
+  gap: 20px;
+}
+
+@media (min-width: 885px) {
+  .nav-links {
+    display: flex;
+  }
+}
+
+.nav-links a {
+  color: #e5e5e5;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.4s;
+}
+
+.nav-links a:hover {
+  color: #b3b3b3;
+}
+
+.mobile-menu-btn {
+  display: block;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (min-width: 885px) {
+  .mobile-menu-btn {
+    display: none;
+  }
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid white;
+  color: white;
+  padding: 7px 10px;
+  width: 200px;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn:hover {
+  opacity: 0.7;
+}
+
+.notifications {
+  position: relative;
+}
+
+.notification-dot {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 8px;
+  height: 8px;
+  background-color: #e50914;
+  border-radius: 50%;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  background-color: #0071eb;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-arrow {
+  font-size: 0.6rem;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: absolute;
+  top: 68px;
+  left: 0;
+  right: 0;
+  background-color: #141414;
+  padding: 20px 4%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mobile-menu a {
+  color: #e5e5e5;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.mobile-menu a:hover {
+  color: #b3b3b3;
+}
